@@ -1,0 +1,22 @@
+.title {
+  padding: 10px 0;
+}
+
+.dependencies {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dependencyItem {
+  margin: 0 10px;
+}
+
+.dependencyLink {
+  display: inline-block;
+  color: #23C9FF;
+  margin-bottom: 5px;
+}
+
+.dependencyLink:hover {
+  text-decoration: underline;
+}
