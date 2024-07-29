@@ -2,16 +2,16 @@
   position: relative;
   padding: 10px 15px;
   background-color: #7CC6fE;
-  border: none;
+  display: inline-block;
+  border: none;  
   color: #FFF;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
-  display: inline-block;
   text-decoration: none;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
   background-color: #70B4E6;
 }
 
@@ -25,3 +25,14 @@
   border: 1px solid #5EB2F2;
   box-shadow: 0px 0 2px 0px #C0C0C0;
 }
+
+.btn--red {
+  background-color: #ff0000;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.btn--red:hover:not([disabled]) {
+  background-color: #e67070;  
+}
+

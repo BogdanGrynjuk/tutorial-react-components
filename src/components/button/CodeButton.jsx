@@ -1,4 +1,10 @@
 import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+const CodeButton = () => {
+  const CODE_STRING = `
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -56,4 +62,18 @@ Button.defaultProps = {
   active: false,
 };
 
-export default Button;
+export default Button;`;
+  
+  return (
+    <>
+      <h2><span>Код компонента Button:</span></h2>
+      <div>
+        <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+          {CODE_STRING}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
+}
+
+export default CodeButton;
