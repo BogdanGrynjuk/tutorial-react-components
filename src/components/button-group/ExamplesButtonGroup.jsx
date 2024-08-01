@@ -23,7 +23,7 @@ const ExamplesButtonGroup = () => {
   };  
 
   return (
-    <>
+    <section>
       <h2><span>1. Горизонтальна група кнопок:</span></h2>
       <ButtonGroup>
         <Button onClick={() => handleHorizontalButtonClick(0)} active={activeHorizontalButton === 0}>Перша</Button>
@@ -43,7 +43,7 @@ const ExamplesButtonGroup = () => {
         <Button onClick={handleToggleSwitch} active={isSwitchOn}>Увімкнено</Button>
         <Button onClick={handleToggleSwitch} active={!isSwitchOn}>Вимкнено</Button>
       </ButtonGroup>
-    </>
+    </section>
   );
 };
 

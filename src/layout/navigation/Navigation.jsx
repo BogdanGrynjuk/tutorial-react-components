@@ -2,19 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../images/react-icon.svg';
 
-import './Navigation.css';
+import css from './Navigation.module.css'
 
 const Navigation = () => (
-  <div className="navigation">
-    <div className="logoWrapper">
+  <div className={css.navigation}>
+    <div className={css.logoWrapper}>
       <img src={logo} height="40" width="40" alt="logo react" />
       <span>React components</span>
     </div>
     <nav>
-      <ul className="nav">
+      <ul className={css.nav}>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/button">Button and Link</NavLink></li>
         <li><NavLink to="/button-group">Button Group</NavLink></li>
+        <li><NavLink to="/icon">Icon</NavLink></li>
       </ul>
     </nav>
   </div>

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import css from './Footer.module.css';
 
 const Footer = () => (
-  <footer className="footer">Created with love</footer>
+  <footer className={css.footer}>Created with love</footer>
 );
 
 export default Footer;

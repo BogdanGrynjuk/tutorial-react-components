@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Main.css';
+import css from './Main.module.css'
 
 const Main = ({ children }) => (
-  <div className="main">
+  <main className={css.main}>
     {children}
-  </div>
+  </main>
 );
 
 Main.propTypes = {

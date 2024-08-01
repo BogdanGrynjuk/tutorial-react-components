@@ -1,0 +1,22 @@
+.title {
+  padding: 10px 0;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigationItem {
+  margin: 0 10px;
+}
+
+.navigationItem a {
+  display: inline-block;
+  color: #23C9FF;
+  margin-bottom: 5px;
+}
+
+.navigationItem a:hover {
+  text-decoration: underline;
+}

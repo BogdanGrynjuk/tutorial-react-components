@@ -3,7 +3,7 @@ import Button from './Button';
 
 const ExamplesButton = () => {
   return (
-    <>
+    <section>
       <h2><span>1. Текст та функція onClick:</span></h2>
       <Button onClick={() => { console.log('Ви натисли на кнопку!'); }}>Button text</Button>
 
@@ -25,7 +25,7 @@ const ExamplesButton = () => {
 
       <h2><span>6. Кнопка з користувацькими стилями</span></h2>
       <Button className='btn--red' type="button">Custom button</Button>      
-    </>
+    </section>
   );
 }
 
