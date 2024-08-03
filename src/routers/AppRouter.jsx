@@ -9,6 +9,7 @@ import ExamplesButton from 'components/button/ExamplesButton';
 import ExamplesButtonGroup from 'components/button-group/ExamplesButtonGroup';
 import ExamplesIcon from 'components/icon/ExamplesIcon';
 import ExamplesImage from 'components/image/ExamplesImage';
+import ExpamplesChip from 'components/chip/ExpamplesChip';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -53,6 +54,13 @@ const AppRouter = () => {
         examplesComponent: <ExamplesImage />,
         codeComponent: CODE_STRING.image,
         componentDetails: COMPONENT_DETAILS.image,
+      })}
+      {createRoute({
+        path: "/chip",
+        componentName: "Chip",
+        examplesComponent: <ExpamplesChip />,
+        codeComponent: CODE_STRING.chip,
+        componentDetails: COMPONENT_DETAILS.chip,
       })}
     </Routes>
   );
