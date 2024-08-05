@@ -3,7 +3,7 @@ import Badge from './Badge';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
-const ExpamplesBadge = () => (
+const ExamplesBadge = () => (
   <>
     <h2><span>1. Бейджики з текстом:</span></h2>
     <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', columnGap: 20 }}>
@@ -91,4 +91,4 @@ const ExpamplesBadge = () => (
   </>
 );
 
-export default ExpamplesBadge;
+export default ExamplesBadge;

@@ -6,7 +6,7 @@ import react from '../../images/react.png';
 import angular from '../../images/angular.png';
 import vue from '../../images/vue.png';
 
-const ExpamplesChip = () => (
+const ExamplesChip = () => (
   <>
     <h2><span>1. Chip з текстом:</span></h2>
     <Chip text="User name" />
@@ -56,4 +56,4 @@ const ExpamplesChip = () => (
   </>
 );
 
-export default ExpamplesChip;
+export default ExamplesChip;

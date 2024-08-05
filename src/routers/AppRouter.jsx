@@ -9,8 +9,9 @@ import ExamplesButton from 'components/button/ExamplesButton';
 import ExamplesButtonGroup from 'components/button-group/ExamplesButtonGroup';
 import ExamplesIcon from 'components/icon/ExamplesIcon';
 import ExamplesImage from 'components/image/ExamplesImage';
-import ExpamplesChip from 'components/chip/ExpamplesChip';
-import ExpamplesBadge from 'components/badge/ExpamplesBadge';
+import ExamplesChip from 'components/chip/ExamplesChip';
+import ExamplesBadge from 'components/badge/ExamplesBadge';
+import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -59,16 +60,23 @@ const AppRouter = () => {
       {createRoute({
         path: "/chip",
         componentName: "Chip",
-        examplesComponent: <ExpamplesChip />,
+        examplesComponent: <ExamplesChip />,
         codeComponent: CODE_STRING.chip,
         componentDetails: COMPONENT_DETAILS.chip,
       })}
       {createRoute({
         path: "/badge",
         componentName: "Badge",
-        examplesComponent: <ExpamplesBadge />,
+        examplesComponent: <ExamplesBadge />,
         codeComponent: CODE_STRING.badge,
         componentDetails: COMPONENT_DETAILS.badge,
+      })}
+      {createRoute({
+        path: "/list-group",
+        componentName: "ListGroup",
+        examplesComponent: <ExamplesListGroup />,
+        codeComponent: CODE_STRING.listGroup,
+        componentDetails: COMPONENT_DETAILS.listGroup,
       })}
     </Routes>
   );
