@@ -12,6 +12,7 @@ import ExamplesImage from 'components/image/ExamplesImage';
 import ExamplesChip from 'components/chip/ExamplesChip';
 import ExamplesBadge from 'components/badge/ExamplesBadge';
 import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
+import ExamplesSelect from 'components/select/ExamplesSelect';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -77,6 +78,13 @@ const AppRouter = () => {
         examplesComponent: <ExamplesListGroup />,
         codeComponent: CODE_STRING.listGroup,
         componentDetails: COMPONENT_DETAILS.listGroup,
+      })}
+      {createRoute({
+        path: "/select",
+        componentName: "Select",
+        examplesComponent: <ExamplesSelect />,
+        codeComponent: CODE_STRING.select,
+        componentDetails: COMPONENT_DETAILS.select,
       })}
     </Routes>
   );
