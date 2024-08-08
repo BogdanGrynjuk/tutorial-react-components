@@ -12,15 +12,15 @@ const Navigation = () => (
     </div>
     <nav>
       <ul className={css.nav}>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/button">Button and Link</NavLink></li>
-        <li><NavLink to="/button-group">Button Group</NavLink></li>
-        <li><NavLink to="/icon">Icon</NavLink></li>
-        <li><NavLink to="/image">Image</NavLink></li>
-        <li><NavLink to="/chip">Chip</NavLink></li>
-        <li><NavLink to="/badge">Badge</NavLink></li>
-        <li><NavLink to="/list-group">List Group</NavLink></li>
-        <li><NavLink to="/select">Select</NavLink></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? css.active : ''}>Home</NavLink></li>
+        <li><NavLink to="/button" className={({ isActive }) => isActive ? css.active : ''}>Button and Link</NavLink></li>
+        <li><NavLink to="/button-group" className={({ isActive }) => isActive ? css.active : ''}>Button Group</NavLink></li>
+        <li><NavLink to="/icon" className={({ isActive }) => isActive ? css.active : ''}>Icon</NavLink></li>
+        <li><NavLink to="/image" className={({ isActive }) => isActive ? css.active : ''}>Image</NavLink></li>
+        <li><NavLink to="/chip" className={({ isActive }) => isActive ? css.active : ''}>Chip</NavLink></li>
+        <li><NavLink to="/badge" className={({ isActive }) => isActive ? css.active : ''}>Badge</NavLink></li>
+        <li><NavLink to="/list-group" className={({ isActive }) => isActive ? css.active : ''}>List Group</NavLink></li>
+        <li><NavLink to="/select" className={({ isActive }) => isActive ? css.active : ''}>Select</NavLink></li>
       </ul>
     </nav>
   </div>

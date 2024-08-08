@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;  
   color: #61dafb;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .navigation {
-  background-color: #D43728;
+  background-color: #20232a;
   box-shadow: 1px 1px 10px #777;
 }
 
@@ -58,4 +58,8 @@
 .nav a.active {
   background-color: rgba(0,0,0,.2);
   border-color: #EBEBEB;
+}
+
+.nav a.active {
+  color: #61dafb;;
 }
