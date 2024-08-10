@@ -13,6 +13,7 @@ import ExamplesChip from 'components/chip/ExamplesChip';
 import ExamplesBadge from 'components/badge/ExamplesBadge';
 import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
 import ExamplesSelect from 'components/select/ExamplesSelect';
+import ExamplesInput from 'components/input/ExamplesInput';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -20,9 +21,21 @@ const AppRouter = () => {
     componentName,
     examplesComponent,
     codeComponent,
-    componentDetails }) => (
-    <Route path={path} element={<Sandbox componentDetails={componentDetails} />}>
-      <Route path="code" element={<CodeDisplay nameComponent={componentName} codeComponent={codeComponent} />} />
+    componentDetails,
+  }) => (
+    <Route
+      path={path}
+      element={<Sandbox componentDetails={componentDetails} />}
+    >
+      <Route
+        path="code"
+        element={
+          <CodeDisplay
+            nameComponent={componentName}
+            codeComponent={codeComponent}
+          />
+        }
+      />
       <Route path="examples" element={examplesComponent} />
     </Route>
   );
@@ -31,63 +44,70 @@ const AppRouter = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       {createRoute({
-        path: "/button",
-        componentName: "Button",
+        path: '/button',
+        componentName: 'Button',
         examplesComponent: <ExamplesButton />,
         codeComponent: CODE_STRING.button,
         componentDetails: COMPONENT_DETAILS.button,
       })}
       {createRoute({
-        path: "/button-group",
-        componentName: "ButtonGroup",
+        path: '/button-group',
+        componentName: 'ButtonGroup',
         examplesComponent: <ExamplesButtonGroup />,
         codeComponent: CODE_STRING.buttonGroup,
         componentDetails: COMPONENT_DETAILS.buttonGroup,
       })}
       {createRoute({
-        path: "/icon",
-        componentName: "Icon",
+        path: '/icon',
+        componentName: 'Icon',
         examplesComponent: <ExamplesIcon />,
         codeComponent: CODE_STRING.icon,
         componentDetails: COMPONENT_DETAILS.icon,
       })}
       {createRoute({
-        path: "/image",
-        componentName: "Image",
+        path: '/image',
+        componentName: 'Image',
         examplesComponent: <ExamplesImage />,
         codeComponent: CODE_STRING.image,
         componentDetails: COMPONENT_DETAILS.image,
       })}
       {createRoute({
-        path: "/chip",
-        componentName: "Chip",
+        path: '/chip',
+        componentName: 'Chip',
         examplesComponent: <ExamplesChip />,
         codeComponent: CODE_STRING.chip,
         componentDetails: COMPONENT_DETAILS.chip,
       })}
       {createRoute({
-        path: "/badge",
-        componentName: "Badge",
+        path: '/badge',
+        componentName: 'Badge',
         examplesComponent: <ExamplesBadge />,
         codeComponent: CODE_STRING.badge,
         componentDetails: COMPONENT_DETAILS.badge,
       })}
       {createRoute({
-        path: "/list-group",
-        componentName: "ListGroup",
+        path: '/list-group',
+        componentName: 'ListGroup',
         examplesComponent: <ExamplesListGroup />,
         codeComponent: CODE_STRING.listGroup,
         componentDetails: COMPONENT_DETAILS.listGroup,
       })}
       {createRoute({
-        path: "/select",
-        componentName: "Select",
+        path: '/select',
+        componentName: 'Select',
         examplesComponent: <ExamplesSelect />,
         codeComponent: CODE_STRING.select,
         componentDetails: COMPONENT_DETAILS.select,
       })}
+      {createRoute({
+        path: '/input',
+        componentName: 'Input',
+        examplesComponent: <ExamplesInput />,
+        codeComponent: CODE_STRING.input,
+        componentDetails: COMPONENT_DETAILS.input,
+      })}
     </Routes>
   );
-}
+};
 
 export default AppRouter;

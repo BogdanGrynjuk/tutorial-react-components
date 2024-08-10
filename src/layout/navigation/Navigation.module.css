@@ -1,13 +1,13 @@
-.logoWrapper { 
+.logoWrapper {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   color: #61dafb;
   font-size: 16px;
   font-weight: bold;
 }
 
-.logoWrapper img {  
+.logoWrapper img {
   pointer-events: none;
   animation: Logo-spin infinite 20s linear;
 }
@@ -56,10 +56,10 @@
 
 .nav a:hover,
 .nav a.active {
-  background-color: rgba(0,0,0,.2);
-  border-color: #EBEBEB;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: #ebebeb;
 }
 
 .nav a.active {
-  color: #61dafb;;
+  color: #61dafb;
 }
