@@ -14,6 +14,7 @@ import ExamplesBadge from 'components/badge/ExamplesBadge';
 import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
 import ExamplesSelect from 'components/select/ExamplesSelect';
 import ExamplesInput from 'components/input/ExamplesInput';
+import ExamplesTabBar from 'components/tabbar/ExamplesTabBar';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -105,6 +106,13 @@ const AppRouter = () => {
         examplesComponent: <ExamplesInput />,
         codeComponent: CODE_STRING.input,
         componentDetails: COMPONENT_DETAILS.input,
+      })}
+      {createRoute({
+        path: '/tab-bar',
+        componentName: 'Tab Bar',
+        examplesComponent: <ExamplesTabBar />,
+        codeComponent: CODE_STRING.tabBar,
+        componentDetails: COMPONENT_DETAILS.tabBar,
       })}
     </Routes>
   );

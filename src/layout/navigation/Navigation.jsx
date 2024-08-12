@@ -92,6 +92,14 @@ const Navigation = () => (
             Input
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/tab-bar"
+            className={({ isActive }) => (isActive ? css.active : '')}
+          >
+            Tab Bar
+          </NavLink>
+        </li>
       </ul>
     </nav>
   </div>

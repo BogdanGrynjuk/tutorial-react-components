@@ -562,8 +562,136 @@ Input.defaultProps = {
   error: '',
 };
 
-export default Input;
-`;
+export default Input;`;
+
+export const TAB_BAR_CODE = `
+// * file TabBar.jsx
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import TabBarNav from './TabBarNav';
+
+import './TabBar.css';
+
+const TabBar = ({ children, className, vertical, ...attrs }) => {
+  const [activeTab, setActiveTab] = useState(null);
+
+  useEffect(() => {
+    const firstTab = getChildrenLabels(children)[0];
+    setActiveTab(firstTab);
+  }, [children]);
+
+  const getChildrenLabels = children =>
+    children.map(({ props }) => props.label);
+
+  const renderTabs = () => {
+    return getChildrenLabels(children).map(navLabel => (
+      <TabBarNav
+        key={navLabel}
+        navLabel={navLabel}
+        className={classNames({ active: activeTab === navLabel })}
+        onChangeActiveTab={setActiveTab}
+      />
+    ));
+  };
+
+  const classes = classNames('tab-bar', className, { vertical });
+
+  return (
+    <div className={classes} {...attrs}>
+      <div className="tab-bar-nav">{renderTabs()}</div>
+      <div className="tab-container">
+        {React.Children.map(children, child =>
+          React.cloneElement(child, { activeTab })
+        )}
+      </div>
+    </div>
+  );
+};
+
+TabBar.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  vertical: PropTypes.bool,
+};
+
+TabBar.defaultProps = {
+  children: [],
+  className: '',
+  vertical: false,
+};
+
+export default TabBar;
+
+
+// * file  TabBarNav.jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import './TabBarNav.css';
+
+const TabBarNav = ({ navLabel, className, onChangeActiveTab }) => {
+  const classes = classNames(className, 'nav-item');
+
+  return (
+    <button
+      type="button"
+      className={classes}
+      onClick={() => {
+        onChangeActiveTab(navLabel);
+      }}
+    >
+      {navLabel}
+    </button>
+  );
+};
+
+TabBarNav.propTypes = {
+  navLabel: PropTypes.string,
+  className: PropTypes.string,
+  onChangeActiveTab: PropTypes.func,
+};
+
+TabBarNav.defaultProps = {
+  navLabel: 'Tab',
+  className: '',
+  onChangeActiveTab: () => {},
+};
+
+export default TabBarNav;
+
+
+// * file TabBarItem.jsx
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import './TabBarItem.css';
+
+const TabBarItem = ({ children, label, activeTab, ...attrs }) => {
+  const classes = classNames('tab-bar-item', { active: activeTab === label });
+
+  return (
+    <div className={classes} {...attrs}>
+      {children}
+    </div>
+  );
+};
+
+TabBarItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  activeTab: PropTypes.string,
+};
+
+TabBarItem.defaultProps = {
+  children: null,
+  activeTab: '',
+};
+
+export default TabBarItem;`;
 
 export const CODE_STRING = {
   button: BUTTON_CODE,
@@ -575,4 +703,5 @@ export const CODE_STRING = {
   listGroup: LIST_GROUP_CODE,
   select: SELECT_CODE,
   input: INPUT_CODE,
+  tabBar: TAB_BAR_CODE,
 };
