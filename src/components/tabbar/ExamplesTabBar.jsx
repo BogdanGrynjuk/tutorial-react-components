@@ -28,7 +28,7 @@ const ExamplesTabBar = () => (
         </p>
       </TabBarItem>
       <TabBarItem label="Картинка">
-        <Image src={monkey} width={150} height={150} circle />
+        <Image src={monkey} alt="monkey" width={150} height={150} circle />
       </TabBarItem>
       <TabBarItem label="Компонент">
         <ButtonGroup>

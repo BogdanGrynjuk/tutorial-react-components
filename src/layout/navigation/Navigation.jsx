@@ -100,6 +100,14 @@ const Navigation = () => (
             Tab Bar
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/tooltip"
+            className={({ isActive }) => (isActive ? css.active : '')}
+          >
+            Tooltip
+          </NavLink>
+        </li>
       </ul>
     </nav>
   </div>

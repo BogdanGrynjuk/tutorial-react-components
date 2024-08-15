@@ -3,8 +3,10 @@
   justify-content: center;
   align-items: center;
   color: #61dafb;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  border-bottom: 1px solid #61dafb;
+  padding: 5px 0;
 }
 
 .logoWrapper img {

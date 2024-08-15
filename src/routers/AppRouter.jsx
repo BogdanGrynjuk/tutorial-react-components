@@ -15,6 +15,7 @@ import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
 import ExamplesSelect from 'components/select/ExamplesSelect';
 import ExamplesInput from 'components/input/ExamplesInput';
 import ExamplesTabBar from 'components/tabbar/ExamplesTabBar';
+import ExamplesTooltip from 'components/tooltip/ExamplesTooltip';
 
 const AppRouter = () => {
   const createRoute = ({
@@ -113,6 +114,13 @@ const AppRouter = () => {
         examplesComponent: <ExamplesTabBar />,
         codeComponent: CODE_STRING.tabBar,
         componentDetails: COMPONENT_DETAILS.tabBar,
+      })}
+      {createRoute({
+        path: '/tooltip',
+        componentName: 'Tooltip',
+        examplesComponent: <ExamplesTooltip />,
+        codeComponent: CODE_STRING.tooltip,
+        componentDetails: COMPONENT_DETAILS.tooltip,
       })}
     </Routes>
   );
