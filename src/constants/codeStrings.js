@@ -779,6 +779,50 @@ Tooltip.defaultProps = {
 
 export default Tooltip;`;
 
+export const MODAL_CODE = `
+import React, { useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
+import { createPortal } from 'react-dom';
+
+import './Modal.css';
+
+const Modal = ({ children, closeModal, modalRoot }) => {
+  const handleKeyDown = useCallback(
+    event => {
+      if (event.code === 'Escape') {
+        closeModal();
+      }
+    },
+    [closeModal]
+  );
+
+  const handleBackdropClick = event => {
+    if (event.currentTarget === event.target) {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
+  return createPortal(
+    <div className="modal-backdrop" onClick={handleBackdropClick}>
+      <div className="modal-window">{children}</div>
+    </div>,
+    modalRoot
+  );
+};
+
+Modal.propTypes = {
+  children: PropTypes.node.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  modalRoot: PropTypes.instanceOf(HTMLElement).isRequired,
+};
+
+export default Modal;`;
+
 export const CODE_STRING = {
   button: BUTTON_CODE,
   buttonGroup: BUTTON_GROUP_CODE,
@@ -791,4 +835,5 @@ export const CODE_STRING = {
   input: INPUT_CODE,
   tabBar: TAB_BAR_CODE,
   tooltip: TOOLTIP_CODE,
+  modal: MODAL_CODE,
 };

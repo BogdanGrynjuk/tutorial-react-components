@@ -1,0 +1,24 @@
+.sidebar-wrapper {
+  padding: 10px;
+  color: #fff;
+  background-color: #20232a;
+
+  box-shadow: 1px 1px 10px #777;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.link {
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+
+.vertical-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+}

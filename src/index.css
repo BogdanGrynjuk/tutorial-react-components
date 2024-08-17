@@ -14,7 +14,7 @@ body * {
 #root {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 5fr 60px;
 }
 
 h1 span,
@@ -23,7 +23,7 @@ h3 span,
 h4 span,
 h5 span,
 h6 span {
-  border-bottom: 1px solid #C0C0C0;
+  border-bottom: 1px solid #c0c0c0;
   display: inline-block;
   padding-bottom: 5px;
 }

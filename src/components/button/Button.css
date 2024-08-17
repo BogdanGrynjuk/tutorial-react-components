@@ -1,10 +1,10 @@
 .btn {
   position: relative;
   padding: 10px 15px;
-  background-color: #7CC6fE;
+  background-color: #7cc6fe;
   display: inline-block;
-  border: none;  
-  color: #FFF;
+  border: none;
+  color: #fff;
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
@@ -12,18 +12,24 @@
 }
 
 .btn:hover:not([disabled]) {
-  background-color: #70B4E6;
+  background-color: #70b4e6;
 }
 
 .btn[disabled] {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .btn.active {
-  background-color: #23C9FF;
-  border: 1px solid #5EB2F2;
-  box-shadow: 0px 0 2px 0px #C0C0C0;
+  background-color: #23c9ff;
+  border: 1px solid #5eb2f2;
+  box-shadow: 0px 0 2px 0px #c0c0c0;
+}
+
+.btn.invert {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .btn--red {
@@ -33,6 +39,5 @@
 }
 
 .btn--red:hover:not([disabled]) {
-  background-color: #e67070;  
+  background-color: #e67070;
 }
-

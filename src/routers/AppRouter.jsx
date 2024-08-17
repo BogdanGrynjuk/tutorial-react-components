@@ -5,15 +5,16 @@ import { CODE_STRING, COMPONENT_DETAILS } from 'constants';
 import Home from 'pages/home/Home';
 import Sandbox from 'pages/sandbox/Sandbox';
 import CodeDisplay from 'components/CodeDisplay';
+import ExamplesBadge from 'components/badge/ExamplesBadge';
 import ExamplesButton from 'components/button/ExamplesButton';
 import ExamplesButtonGroup from 'components/button-group/ExamplesButtonGroup';
+import ExamplesChip from 'components/chip/ExamplesChip';
 import ExamplesIcon from 'components/icon/ExamplesIcon';
 import ExamplesImage from 'components/image/ExamplesImage';
-import ExamplesChip from 'components/chip/ExamplesChip';
-import ExamplesBadge from 'components/badge/ExamplesBadge';
-import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
-import ExamplesSelect from 'components/select/ExamplesSelect';
 import ExamplesInput from 'components/input/ExamplesInput';
+import ExamplesListGroup from 'components/list-group/ExamplesListGroup';
+import ExamplesModal from 'components/modal/ExamplesModal';
+import ExamplesSelect from 'components/select/ExamplesSelect';
 import ExamplesTabBar from 'components/tabbar/ExamplesTabBar';
 import ExamplesTooltip from 'components/tooltip/ExamplesTooltip';
 
@@ -46,6 +47,13 @@ const AppRouter = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       {createRoute({
+        path: '/badge',
+        componentName: 'Badge',
+        examplesComponent: <ExamplesBadge />,
+        codeComponent: CODE_STRING.badge,
+        componentDetails: COMPONENT_DETAILS.badge,
+      })}
+      {createRoute({
         path: '/button',
         componentName: 'Button',
         examplesComponent: <ExamplesButton />,
@@ -58,6 +66,13 @@ const AppRouter = () => {
         examplesComponent: <ExamplesButtonGroup />,
         codeComponent: CODE_STRING.buttonGroup,
         componentDetails: COMPONENT_DETAILS.buttonGroup,
+      })}
+      {createRoute({
+        path: '/chip',
+        componentName: 'Chip',
+        examplesComponent: <ExamplesChip />,
+        codeComponent: CODE_STRING.chip,
+        componentDetails: COMPONENT_DETAILS.chip,
       })}
       {createRoute({
         path: '/icon',
@@ -74,18 +89,11 @@ const AppRouter = () => {
         componentDetails: COMPONENT_DETAILS.image,
       })}
       {createRoute({
-        path: '/chip',
-        componentName: 'Chip',
-        examplesComponent: <ExamplesChip />,
-        codeComponent: CODE_STRING.chip,
-        componentDetails: COMPONENT_DETAILS.chip,
-      })}
-      {createRoute({
-        path: '/badge',
-        componentName: 'Badge',
-        examplesComponent: <ExamplesBadge />,
-        codeComponent: CODE_STRING.badge,
-        componentDetails: COMPONENT_DETAILS.badge,
+        path: '/input',
+        componentName: 'Input',
+        examplesComponent: <ExamplesInput />,
+        codeComponent: CODE_STRING.input,
+        componentDetails: COMPONENT_DETAILS.input,
       })}
       {createRoute({
         path: '/list-group',
@@ -95,18 +103,18 @@ const AppRouter = () => {
         componentDetails: COMPONENT_DETAILS.listGroup,
       })}
       {createRoute({
+        path: '/modal',
+        componentName: 'Modal',
+        examplesComponent: <ExamplesModal />,
+        codeComponent: CODE_STRING.modal,
+        componentDetails: COMPONENT_DETAILS.modal,
+      })}
+      {createRoute({
         path: '/select',
         componentName: 'Select',
         examplesComponent: <ExamplesSelect />,
         codeComponent: CODE_STRING.select,
         componentDetails: COMPONENT_DETAILS.select,
-      })}
-      {createRoute({
-        path: '/input',
-        componentName: 'Input',
-        examplesComponent: <ExamplesInput />,
-        codeComponent: CODE_STRING.input,
-        componentDetails: COMPONENT_DETAILS.input,
       })}
       {createRoute({
         path: '/tab-bar',

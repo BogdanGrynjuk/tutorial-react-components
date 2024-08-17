@@ -1,0 +1,31 @@
+.custom-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-component__header,
+.custom-component__body,
+.custom-component__footer {
+  padding: 10px;
+}
+
+.custom-component__header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.custom-component__title {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-component__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 20px;
+}
