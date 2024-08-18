@@ -12,6 +12,7 @@ body * {
 }
 
 #root {
+  position: relative;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr 60px;
@@ -29,6 +30,20 @@ h6 span {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: #000;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
