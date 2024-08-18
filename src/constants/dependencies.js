@@ -9,4 +9,9 @@ export const DEPENDENCIES = [
     name: 'classNames',
     link: 'https://www.npmjs.com/package/classnames',
   },
+  {
+    id: 'reactsyntaxhighlighter',
+    name: 'React Syntax Highlighter',
+    link: 'https://www.npmjs.com/package/react-syntax-highlighter',
+  },
 ];
