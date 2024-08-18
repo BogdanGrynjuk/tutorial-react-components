@@ -13,7 +13,7 @@ const ExamplesInput = () => (
     <h2>
       <span>2. Input type number (з label):</span>
     </h2>
-    <Input id="number" label="виберіть чилсло" type="number" />
+    <Input id="number" label="виберіть число" type="number" />
 
     <h2>
       <span>3. Input type password (з помилкою):</span>
@@ -26,7 +26,7 @@ const ExamplesInput = () => (
     <Input id="week" label="Тиждень" error="неправильний тиждень" type="week" />
 
     <h2>
-      <span>5. Input type date (з атрибутом requered):</span>
+      <span>5. Input type date (з атрибутом required):</span>
     </h2>
     <Input id="date" required type="date" />
 

@@ -20,7 +20,7 @@ const UsageExampleTextModal = () => {
         <Modal modalRoot={TEXT_MODAL} closeModal={handleHideModal}>
           <p style={{ padding: '20px' }}>
             Натисніть клавішу Escape або натисніть лівою кнопкою миші поза
-            менами модального вікна щоб закрити його
+            межами модального вікна щоб закрити його...
           </p>
         </Modal>
       )}

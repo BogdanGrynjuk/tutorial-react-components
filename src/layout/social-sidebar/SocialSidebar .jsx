@@ -16,7 +16,7 @@ const SocialSidebar = () => (
       <li>3</li>
     </ul>
 
-    <div class={css['vertical-text']}>
+    <div className={css['vertical-text']}>
       <span>C</span>
       <span>r</span>
       <span>e</span>
