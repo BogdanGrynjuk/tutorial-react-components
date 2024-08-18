@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/tutorial-react-components/static/css/main.8c7be41f.css",
-    "main.js": "/tutorial-react-components/static/js/main.63985b29.js",
+    "main.js": "/tutorial-react-components/static/js/main.6c9e1c39.js",
     "static/media/monkey.jpg": "/tutorial-react-components/static/media/monkey.5d690406a993a5460c85.jpg",
     "static/media/react.png": "/tutorial-react-components/static/media/react.97301e8b73c16a5d93c6.png",
     "static/media/angular.png": "/tutorial-react-components/static/media/angular.4cdc2a9a232e8b4ee904.png",
     "static/media/social-icon-github.svg": "/tutorial-react-components/static/media/social-icon-github.ee2cd958d2fc8025a8e5d05703152531.svg",
     "static/media/react-icon.svg": "/tutorial-react-components/static/media/react-icon.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/tutorial-react-components/index.html",
     "static/media/social-icon-linkedIn.svg": "/tutorial-react-components/static/media/social-icon-linkedIn.37e12dc6cc75f56df05bf039f73f348f.svg",
+    "index.html": "/tutorial-react-components/index.html",
     "static/media/social-icon-telegram.svg": "/tutorial-react-components/static/media/social-icon-telegram.c6ffe96e692586d1cb0bb82a20cbfca5.svg",
     "main.8c7be41f.css.map": "/tutorial-react-components/static/css/main.8c7be41f.css.map",
-    "main.63985b29.js.map": "/tutorial-react-components/static/js/main.63985b29.js.map"
+    "main.6c9e1c39.js.map": "/tutorial-react-components/static/js/main.6c9e1c39.js.map"
   },
   "entrypoints": [
     "static/css/main.8c7be41f.css",
-    "static/js/main.63985b29.js"
+    "static/js/main.6c9e1c39.js"
   ]
 }
